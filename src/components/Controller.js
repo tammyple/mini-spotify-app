@@ -1,4 +1,4 @@
-import { Box, Button } from "@mui/material";
+import { Box } from "@mui/material";
 import React from "react";
 import SkipPreviousIcon from "@mui/icons-material/SkipPrevious";
 import SkipNextIcon from "@mui/icons-material/SkipNext";
@@ -6,7 +6,6 @@ import PlayCircleIcon from "@mui/icons-material/PlayCircle";
 import PauseCircleIcon from "@mui/icons-material/PauseCircle";
 import useMusicPlayer from "../hooks/usePlayerProvider";
 import IconButton from "@mui/material/IconButton";
-import DeleteIcon from "@mui/icons-material/Delete";
 
 function Controller() {
   const {
@@ -14,7 +13,6 @@ function Controller() {
     playPreviousTrack,
     playNextTrack,
     currentTrackIndex,
-    currentTrackName,
     playTrack,
   } = useMusicPlayer();
 
@@ -31,7 +29,8 @@ function Controller() {
             height: "80px",
             width: "400px",
             borderRadius: "0px 0px 70px 70px",
-            spacing: 10,
+            spacing: 20,
+            gap: "20px",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -40,17 +39,24 @@ function Controller() {
         >
           <IconButton
             aria-label="previous"
-            size="large"
             onClick={playPreviousTrack}
+            sx={{ transform: `scale(1.8)` }}
           >
             <SkipPreviousIcon />
           </IconButton>
 
-          <IconButton onClick={togglePlayController}>
+          <IconButton
+            onClick={togglePlayController}
+            sx={{ transform: `scale(2.2)` }}
+          >
             {isPlaying ? <PauseCircleIcon /> : <PlayCircleIcon />}
           </IconButton>
 
-          <IconButton onClick={playNextTrack}>
+          <IconButton
+            aria-label="next"
+            onClick={playNextTrack}
+            sx={{ transform: `scale(1.8)` }}
+          >
             <SkipNextIcon />
           </IconButton>
         </Box>

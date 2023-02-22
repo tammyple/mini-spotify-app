@@ -19,9 +19,7 @@ function Heading() {
           background: `linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5)` /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */,
         }}
       >
-        <Typography sx={{ color: "text.primary" }}>
-          {currentTrackName}
-        </Typography>
+        <Typography color="text.primary">{currentTrackName}</Typography>
       </Box>
     </>
   );

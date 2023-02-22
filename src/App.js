@@ -1,7 +1,6 @@
 import Controller from "./components/Controller";
 import TrackList from "./components/TrackList";
 import { MusicPlayerProvider } from "./contexts/MusicPlayerContext";
-import Stack from "@mui/material/Stack";
 import { Container } from "@mui/material";
 import Heading from "./components/Heading";
 
@@ -12,6 +11,8 @@ const App = () => {
         sx={{
           width: "400px",
           height: "600px",
+          marginLeft: "auto",
+          marginRight: "auto",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
