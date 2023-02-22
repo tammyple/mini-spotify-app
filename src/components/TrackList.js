@@ -20,6 +20,7 @@ function TrackList() {
                 height: "80px",
                 borderRadius: "20px",
                 spacing: 10,
+                padding: "20px",
                 display: "flex",
                 justifyContent: "start",
                 alignItems: "center",
